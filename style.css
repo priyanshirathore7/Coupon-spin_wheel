@@ -1,0 +1,283 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: url(./img/spin.jpeg); */
+    background-size: cover;
+    background-position: center;
+}
+
+.mainbox{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin-top: 50px;
+}
+
+.mainbox:after{
+    position: absolute;
+    content:"" ;
+    width: 100%;
+    height: 100%; 
+    background: url(./img/arrow2.png) no-repeat;
+    background-size: 20%;
+    left:96%;
+    top: 48%;
+    transform: rotate(0deg);
+}
+
+.box{
+    width: 100%;
+    height: 100%;
+    border-radius:50% ;
+    border: 10px solid rgb(230, 13, 13);
+    position: relative;
+    overflow: hidden;
+    transition: all ease-in-out 5s;
+    transform: rotate(90deg);
+}
+
+span{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+
+}
+.span1{
+    clip-path: polygon(0% 17%, 0 50%, 50% 50%);
+    background-color: aqua;
+}
+.span2{
+    clip-path: polygon(0 17% , 30% 0, 50% 50%);
+    background-color: rgb(255, 0, 170);
+}
+.box2.span2{
+    background-color: rgb(253, 50, 31);
+}
+.span3{
+    clip-path: polygon(30% 0 , 71% 0%, 50% 50%);
+    background-color: rgb(255, 251, 29);
+}
+
+.span4{
+    clip-path: polygon(71% 0% , 100% 18%, 50% 50%);
+    background-color: rgb(28, 0, 153);
+}
+
+.span5{
+    clip-path: polygon(100% 18%, 100% 50%, 50% 50%);
+    background-color: rgb(240, 158, 226);
+}
+
+.box2 .span3{
+    background-color: rgb(159, 242, 58);
+}
+
+.box2{
+    width: 100%;
+    height: 100%;
+    transform: rotate(180deg);
+}
+.box2 .span1{
+    background: rgb(29, 42, 37);
+}
+.font{
+    color: aliceblue;
+    font-size: 20px;
+
+}
+.box1 .span1 h5{
+    position: absolute;
+    top: 41%;
+    right: 68%;
+    transform: rotate(200deg);
+    text-align: center;
+    font-size: 24px;
+
+}
+
+.box1 .span2 h5{
+    position: absolute;
+    top: 32%;
+    right: 57%;
+    
+    transform: rotate(-130deg);
+    text-align: center;
+    font-size: 21px;
+    
+}
+
+.box1 .span3 h5{
+    position: absolute;
+    top: 14%;
+    right: 42%;
+    
+    transform: rotate(-90deg);
+    text-align: center;
+    font-size: 22px;
+    
+}
+.box1 .span4 h5{
+    position: absolute;
+    top: 25%;
+    right: 16%;
+    
+    transform: rotate(-45deg);
+    text-align: center;
+    text-align: center;
+}
+.box1 .span5 h5{
+    position: absolute;
+    top: 38%;
+    right: 6%;
+    font-size: 21px;
+    transform: rotate(-15deg);
+    text-align: center;
+    text-align: center;
+}
+.box2 .span1 h5{
+    font-size: 50px;
+    position: absolute;
+    top: 34%;
+    right: 70%;
+    
+    transform: rotate(200deg);
+    text-align: center;
+   
+}
+
+.box2 .span2 h5{
+  
+    position: absolute;
+    top: 21%;
+    right: 62%;
+    font-size: 21px;
+    transform: rotate(-130deg);
+    text-align: center;
+   
+}
+.box2 .span3 h5{
+   
+    position: absolute;
+    top: 12%;
+    right: 46%;
+    font-size: 22px;
+    transform: rotate(270deg);
+    text-align: center;
+   
+}
+.box2 .span4 h5{
+    
+    position: absolute;
+    top: 22%;
+    right: 21%;
+    font-size: 21px;
+    transform: rotate(310deg);
+    text-align: center;
+   
+}
+.box2 .span5 h5{
+    
+    position: absolute;
+    top: 38%;
+    right: 6%;
+    font-size: 21px;
+    transform: rotate(-20deg);
+    text-align: center;
+   
+}
+
+.spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 4px solid rgb(255, 255, 255);
+    color: white;
+    background: yellow;
+    box-shadow: 0px 5px 25px black;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.spin:active{
+    width: 70px;
+    height: 70px;
+    font-size: 18px;
+}
+.mainbox.animate:after{
+animation: animateArrow 0.7s ease infinite ;
+}
+
+audio{
+    display: none;
+}
+@keyframes animateArrow{
+    50%{
+        right: -50px;
+    }
+}
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+  }
+  
+  .mainbox {
+    position: relative;
+    margin: 300px auto 0;
+    /* width: 500px;
+    height: 250px; */
+    background: linear-gradient(0deg, #000, #272727);
+  }
+  
+  .mainbox:before, .mainbox:after {
+    content: '';
+    position: absolute;
+    left: -8px;
+    border: 10px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 18px);
+    height: calc(100% + 15px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+  }
+  
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .mainbox:after {
+    filter: blur(50px);
+  }
+
+
